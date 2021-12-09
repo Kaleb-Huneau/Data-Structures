@@ -69,6 +69,7 @@ int main(){
     remove_queue();
 
     print_queue();
+
     return 0;
 }
 
