@@ -20,7 +20,7 @@ bool add_queue(int data){//add an item to the queue
         return false;
     }
     //not full
-    tail ++; //move end to next position and insert the data here
+    tail  = ++tail % SIZE; //move end to next position and insert the data here
     queue[tail] = data;
     //if this is the first element, then make point both head and tail to the item
     if(head == -1){
@@ -36,7 +36,7 @@ bool remove_queue(){//no input needed to remove from queue
         printf("Queue is already empty\n");
         return false;
     }
-    head ++;//move head to the next position
+    head = ++head % SIZE;//move head to the next position and take mod size to handle wrap around
 
     //is it now empty?
     if(is_empty()){
