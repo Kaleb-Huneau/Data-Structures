@@ -1,5 +1,6 @@
 //
 // Created by Kaleb Huneau on 2021-12-08.
+//This program defines a node and implements functions to build linked lists from scratch
 //
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,17 +9,15 @@ typedef struct node{//this is what a node will look like in the linked list
     int data;
     struct node *next;
 }node;
+
 //initialize the head of the list
 node *start = NULL;
-
 
 int init_list(int data);
 int insert_beginning(int data);
 int insert_end(int data);
 void print_list();
 int find_and_replace(int target, int new);
-
-
 
 int main(){
     //pointers for start and end of a list
